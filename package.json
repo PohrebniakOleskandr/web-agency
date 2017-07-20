@@ -1,0 +1,22 @@
+{
+  "name": "web-agency",
+  "version": "0.0.0",
+  "description": "Simple angular js site",
+  "main": "angular-route.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PohrebniakOleskandr/web-agency.git"
+  },
+  "author": "Pohrebniak Aleksandr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PohrebniakOleskandr/web-agency/issues"
+  },
+  "homepage": "https://github.com/PohrebniakOleskandr/web-agency#readme",
+  "scripts": {
+    "start": "http-server ./ -a localhost -p 8000 -c-1"
+  }
+}
