@@ -5,11 +5,11 @@ app.config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when('/main', {
 		templateUrl: 'pages/main.html',
-		controller: 'MainCtrl'
+		controller: 'ServicesCtrl'
     })
     .when('/about', {
 		templateUrl: 'pages/about.html',
-		controller: 'MainCtrl'
+		controller: 'ServicesCtrl'
     })
     .when('/contact', {
 		templateUrl: 'pages/contact.html',
@@ -22,16 +22,14 @@ app.config(['$routeProvider', function($routeProvider){
     .otherwise({redirectTo:'/main'});
 }]);    
 
-app.controller('MainCtrl', ['$scope',function($scope){
-    //console.log($scope);
-    console.log('hello');
+app.controller('ServicesCtrl', ['$scope','$http',function($scope, $http){
+    $http.get('services.json').then(function(response){
+        $scope.services = response.data;
+    })
 }]);
 
-
-app.controller('ServicesCtrl', ['$scope',function($scope){
-    
-}]);
-
-app.controller('ContactCtrl', ['$scope',function($scope){
-    
+app.controller('ContactCtrl', ['$scope','$http',function($scope, $http){
+        $http.get('locations.json').then(function(response){
+        $scope.locations = response.data;
+    })
 }]);
